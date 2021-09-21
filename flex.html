@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 350px;
+            /*flex-grow: 1;*/
+            /*height: auto !important;*/
+            flex-shrink: 1;
+        }
+        .box-1 {
+            /*height: 50px;*/
+            background-color: green;
+            flex-shrink: 1;
+        }
+        .box-2 {
+            /*height: 40px;*/
+            background-color: grey;
+            align-self: flex-end;
+            /*flex-grow: 0;*/
+            order: -1;
+        }
+        .box-3 {
+            /*height: 60px;*/
+            background-color: red;
+            /*flex-grow: 5;*/
+        }
+        .box-4 {
+            height: 80px;
+            background-color: blue;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+    </style>
+</head>
+<body>
+<div class="flex-container">
+    <div class="box box-1">1</div>
+    <div class="box box-2">2</div>
+    <div class="box box-3">3</div>
+    <div class="box box-4">4</div>
+</div>
+</body>
+</html>

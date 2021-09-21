@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Oswald:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.team {
+    background-color: #1a1a1a;
+}
+
+.team-wrapper {
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.team-wrapper > div {
+    width: 48%;
+}
+
+.team-content {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.team-content h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.team-content p {
+    margin-bottom: 50px;
+}
+
+.learn-more {
+    padding: 15px 50px;
+    font-size: 18px;
+    background-color: #5171F5;
+    color: #fff;
+    width: fit-content;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    letter-spacing: 3px;
+    transition: 0.3s all linear;
+}
+
+.learn-more:hover {
+    background-color: #b7c5fa;
+}
+
+.team-cards {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cards-right {
+    align-self: flex-start;
+}
+
+.team-cards > div {
+    width: 48%;
+
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.card-avatar {
+    width: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+
+}
+
+.card-title, .card-occupation, .card-links {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.card-title {
+    font-family: Oswald, sans-serif;
+    font-size: 21px;
+}
+
+.card-occupation {
+    color: #e7467f;
+}
