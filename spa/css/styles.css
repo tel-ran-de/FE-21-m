@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+
+img {
+    max-width: 100%;
+    z-index: 0;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #f05510;
+}
+
+.spa {
+    background: linear-gradient(to bottom, white 0, white 500px, #f9e0d6 300px, #f9e0d6 100%);
+    padding: 100px 0;
+}
+
+.spa-title {
+    font-size: 86px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.spa-description {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.spa-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.spa-list > div {
+    width: 40%;
+}
+.spa-image {
+    display: flex;
+    align-items: flex-end;
+    width: 90%;
+    position: relative;
+    z-index: 0;
+}
+.spa-card {
+    margin-bottom: 50px;
+}
+.spa-content {
+    width: 80%;
+    background-color: #fff;
+    padding: 30px 20px 40px;
+    margin-left: 20%;
+    margin-top: -50px;
+    z-index: 1;
+    position: relative;
+}
+
+.card-title {
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-size: 1.65em;
+}
+.card-price {
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: .8em;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.card-action {
+    padding: 8px 30px;
+    background-color: #f05510;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .9em;
+    cursor: pointer;
+    transition: 0.5s all linear;
+}
+
+.card-action:hover {
+    background-color: #B33307;
+}
