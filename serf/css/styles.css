@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.serf {
+    background-image: url('https://images03.nicepage.io/c461c07a441a5d220e8feb1a/b32c7cc7c7a35a4db6d2bc5c/697min.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 500px;
+    padding-bottom: 100px;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.card-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 32%;
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+/*.card figcaption {*/
+/*    font-family: 'Lobster', cursive;*/
+/*    font-size: 2em;*/
+/*}*/
+
+.card figcaption {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    position: relative;
+    background-color: rgba(0,0,0,.4);
+    color: #fff;
+    margin-top: -65px;
+    text-align: center;
+    padding: 8px 0;
+}
