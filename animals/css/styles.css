@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url('https://images03.nicepage.io/a1389d7bc73adea1e1c1fb7e/4c582d9e19105463aab222bb/pexelsphoto3735238.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    text-align: center;
+    font-size: 50px;
+
+}
+nav a {
+    color: aliceblue;
+    transition: 0.3s color ease-in-out;
+}
+
+nav a:hover {
+    color: lightskyblue;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials-list {
+    display: flex;
+    list-style: none;
+    font-size: 36px;
+}
+
+.socials-item {
+    margin-right: 20px;
+}
+
+.socials-item a {
+    color: #fff;
+    transition: 0.3s color ease-in-out;
+}
+
+.socials-item a:hover {
+    color: lightskyblue;
+}
+
+.hero {
+    padding: 50px;
+}
+
+.hero .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.hero .wrapper > div {
+    width: 32%;
+}
+
+.hero-img img {
+    max-width: 100%;
+}
+
+.hero-title {
+    padding: 0 0 30px 125px;
+    align-self: flex-end;
+    font-weight: 700;
+
+}
+
+.hero-title .subtitle {
+    font-size: 1.25em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.hero-title .title {
+    font-size: 3.75em;
+    line-height: 1.1;
+}
+
+.hero-content {
+    padding: 30px;
+    line-height: 1.8;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+}
+
+.animals {
+    background-color: #e5e5e5;
+    padding: 75px 0;
+}
+
+.animals .wrapper {
+    display: grid;
+    grid-template-columns: 53% 19% 19%;
+    grid-gap: 5%;
+}
+
+.animals-img {
+    grid-row: 1 / 3;
+}
+
+.animals-button {
+    padding: 20px 65px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s background-color ease-in-out;
+}
+
+.animals-button:hover {
+    background-color: #fff;
+}
+
+.animals-title {
+    margin-top: 20px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
