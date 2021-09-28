@@ -146,3 +146,199 @@ nav a:hover {
     font-size: 1.3em;
     text-transform: uppercase;
 }
+
+.waiting {
+    display: flex;
+
+}
+
+.waiting > div {
+    width: 50%;
+}
+
+.waiting-left {
+    background-image: url('https://images03.nicepage.io/a1389d7bc73adea1e1c1fb7e/1cac4ec28ca2525b914b842d/pexelsphoto374825.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 150px 50px;
+    text-align: center;
+}
+
+.waiting-left h3 {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.waiting-top figure {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 30px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.waiting-top h3 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: 5px;
+}
+
+.waiting-bottom {
+    max-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.services {
+    padding: 50px 0;
+}
+
+.services .wrapper {
+    /*width: 1024px;*/
+    display:grid;
+    grid-template-columns: 30% 30% 35%;
+    grid-gap: 30px;
+}
+
+.service-img {
+    grid-row: 1/3;
+    grid-column: 3/4;
+}
+
+.services .card {
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.services .number {
+    font-size: 48px;
+}
+
+.services .title {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.services p {
+    color: #7d7d7d;
+}
+
+.help {
+    background-color: #e5e5e5;
+    padding: 50px 0;
+}
+
+.help .wrapper {
+    display: flex;
+}
+
+.help .wrapper > div {
+    width: 33%;
+}
+
+.bg-black {
+    background-color: #000;
+    display: flex;
+    align-items: flex-end;
+    width: 34% !important;
+}
+
+.help-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.help-content h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.help-content h2 {
+    font-size: 3.75rem;
+    margin: 20px auto 30px;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.action {
+    background-image: url('https://images03.nicepage.io/a1389d7bc73adea1e1c1fb7e/92a300c36c3c56bc8ce9510f/pexelsphoto1458916.jpg');
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+
+.action .wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.action-content {
+    width: 40%;
+    text-align: right;
+}
+
+.action-content h2 {
+    font-size: 3.75rem;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 20px;
+    /*font-family: Roboto, sans-serif;*/
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+}
+
+.form input {
+    width: 60%;
+    font-size: 18px;
+    padding: 7px 10px;
+    border: 1px solid #e5e5e5;
+    text-align: right;
+}
+
+.form button {
+    width: 40%;
+    font-size: 18px;
+    padding: 7px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #000;
+}
+
+.copy {
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+}

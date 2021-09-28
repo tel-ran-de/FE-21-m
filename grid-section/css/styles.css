@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Roboto, sans-serif;
+}
+
+/*img {*/
+/*    max-width: 100%;*/
+/*}*/
+
+.factory {
+    padding: 50px 0;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.factory-content {
+    text-align: center;
+}
+
+.factory-content h2 {
+    line-height: 1;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 802px;
+    margin: 60px auto 30px;
+    color: #ed7a21;
+}
+
+.factory-content p {
+    width: 767px;
+    font-size: 1.25rem;
+    margin: 0 auto 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 350px);
+    grid-gap: 30px;
+}
+
+.thinking-man {
+    grid-row: 1 / 3;
+    overflow: hidden;
+    background-image: url('https://images02.nicepage.com/c461c07a441a5d220e8feb1a/ab39c28363025a4a87b0c462/-min.jpg');
+    background-position: left center;
+    background-size: cover;
+}
+
+
+.man {
+    background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/2cec6d2e59d75c5f88a50afb/gggg.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.machine {
+    background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/71d03ef9a9f25405bb8f6419/wa3r-min.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.working-man {
+    grid-column: 2 / span 2;
+    background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/a2318725b73a5c8ba9504840/ht6uy-min.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.how-to {
+    background-color: #2b335d;
+    padding: 30px 75px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.875rem;
+}
+
+.how-to a {
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: #fff;
+    color: #2b335d;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    width: 70%;
+    text-align: center;
+}
+
+.smart-factory {
+    border: 5px solid #ed7a21;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.smart-factory h3 {
+    font-size: 56px;
+    color: #ed7a21;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.smart-factory svg {
+    fill: #ed7a21;
+    width: 30%;
+}
+
+.description {
+    padding: 30px;
+    background-color: #ed7a21;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.description p {
+    line-height: 1.8;
+}
+
+.description svg {
+    width: 20%;
+    fill: #fff;
+    margin-bottom: 30px;
+}
