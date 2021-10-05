@@ -1,0 +1,26 @@
+//@import "../variable";
+//@import "../mixins";
+
+.block {
+  @include sect(50px, lightgray);
+  border: {
+    top: 1px solid black;
+    bottom: 1px dotted $redColor;
+  }
+  @include bgFull("#1111");
+  &__logo {
+    font-weight: 700;
+    @include bgFull("#2222");
+    img {
+      max-width: 100%;
+      &:hover {
+        display: none;
+      }
+    }
+
+    &--active {
+      color: $redColor;
+    }
+
+  }
+}

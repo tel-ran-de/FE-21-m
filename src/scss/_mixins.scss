@@ -1,0 +1,18 @@
+@mixin bgFull ($img) {
+  background: {
+    image: url($img);
+    position: 50% 50%;
+    size: cover;
+    repeat: no-repeat;
+  }
+}
+
+@mixin sect ($pad, $bgc) {
+  padding: $pad 0;
+  background-color: $bgc;
+}
+
+@mixin centerBlock ($width) {
+  width: $width;
+  margin: 0 auto;
+}

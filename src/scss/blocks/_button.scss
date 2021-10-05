@@ -1,0 +1,20 @@
+%btn {
+  margin: 10px;
+  color: black;
+  padding: 20px 50px;
+}
+
+.btn-blue {
+  @extend %btn;
+  background-color: blue;
+}
+
+.btn-red {
+  @extend %btn;
+  background-color: red;
+}
+
+.btn-green {
+  @extend %btn;
+  background-color: green;
+}

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  $redColor: #ff0000;
+  font-size: $mainSize;
+  font-weight: 400;
+  font-style: normal;
+  color: $redColor;
+}
+
+.wrapper {
+  @include centerBlock(75%);
+}
