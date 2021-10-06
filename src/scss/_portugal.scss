@@ -1,0 +1,65 @@
+.portugal {
+
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  @include desktop {
+    grid-template-columns: repeat(4,1fr);
+  }
+  grid-gap: 10px;
+  &__item {
+    &--first {
+      @include desktop {
+        grid-row: 1/3;
+      }
+    }
+    &--second {
+      @include desktop {
+        grid-column: 2/5;
+      }
+    }
+  }
+}
+
+.card {
+  padding: 10px;
+  display: grid;
+  grid-gap: 20px;
+  &__image {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    object-fit: fill;
+    &--first {
+      padding-top: 65%;
+      @include desktop {
+        padding-top: 172%;
+        box-shadow: 0 0 40px 0 rgb(0 0 0 / 40%);
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__title {
+    font-family: $ff_header;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    margin-top: 30px;
+  }
+
+  &__description {
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
