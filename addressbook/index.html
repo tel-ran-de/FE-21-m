@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book</title>
+</head>
+<body>
+<header class="header">
+    <div class="wrapper">
+        <form id="new-contact">
+            <input type="text" id="full-name" placeholder="Full Name (fName lName)">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <input type="text" id="email" placeholder="Email Address">
+            <input type="text" id="address" placeholder="Address (City, Address line)">
+            <button class="btn" type="submit">Add</button>
+        </form>
+    </div>
+</header>
+<main class="main">
+    <div class="wrapper">
+        <div class="l-side">
+            <ul id="person-list"></ul>
+        </div>
+        <div class="r-side">
+            <div id="app"></div>
+        </div>
+    </div>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>
