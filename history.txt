@@ -1,0 +1,53 @@
+   0 ls -la
+   1 cd ~
+   2 ls
+   3 cd /home
+   4 ls -la
+   5 cd ~
+   6 ls la
+   7 ls -la
+   8 cd /home
+   9 cd ~
+  10 clear
+  11 mkdir /home/test
+  12 cd ../home/test/
+  13 cd ~
+  14 cd /home/test
+  15 cd home
+  16 cd ../
+  17 clear
+  18 mkdir ./opt/task
+  19 mkdir -p ./opt/task
+  20 cd ./opt/task/
+  21 touch 1.txt
+  22 ls
+  23 cat 1.txt 
+  24 echo "Hello World" > /home/opt/task/1.txt 
+  25 cat 1.txt 
+  26 echo "Just new string" > 1.txt 
+  27 cat 1.txt 
+  28 echo "\nAnother string" >> 1.txt 
+  29 cat 1.txt 
+  30 date
+  31 date > ./1.txt 
+  32 cat 1.txt 
+  33 cd ../
+  34 mkdir work
+  35 cp ./task/1.txt ./work/work-1.txt
+  36 cd work/
+  37 ls
+  38 cat work-1.txt 
+  39 cd ../
+  40 cp ./task/1.txt ./work
+  41 cd work/
+  42 ll
+  43 ls
+  44 ls > 1.txt
+  45 cat 1.txt 
+  46 ls -la > 1.txt
+  47 cat 1.txt 
+  48 cd ~
+  49 ls la
+  50 ls -la
+  51 cat .ash_history 
+  52 history > /tmp/history.txt
