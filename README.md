@@ -1,26 +1,4 @@
 ```
- 5373  yarn init -y
- 5374  yarn add webpack webpack-cli -D
- 5375  node webpack
- 5376  webpack
- 5377  yarn run
- 5378  yarn watch
- 5379  yarn add babel-loader @babel/core @babel/preset-env
- 5380  yarn watch
- 5381  yarn remove babel-loader @babel/core @babel/preset-env
- 5382  yarn add babel-loader @babel/core @babel/preset-env -D
- 5383  yarn watch
- 5384  yarn add sass-loader node-sass -D
- 5385  yarn watch
- 5386  yarn add style-loader css-loader -D
- 5387  yarn watch
- 5388  yarn add postcss-loader cssnano -D
- 5389  yarn watch
- 5390  yarn remove postcss-loader cssnano -D
- 5391  yarn watch
- 5392  yarn add bootstrap
- 5393  yarn watch
- 5394  clear
  5395  yarn -v
  5396  yarn init -y
  5397  yarn add webpack webpack-cli -D
