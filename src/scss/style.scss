@@ -1,0 +1,12 @@
+h2 {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid green;
+  text-align: center;
+  font-weight: 400;
+  &:hover {
+    font-weight: 900;
+    color: red;
+  }
+}
