@@ -1,24 +1,21 @@
-import React, {useState, createContext} from 'react';
-import CounterWrapper from "./CounterWrapper";
+import React from 'react';
+import GlobalContextProvider from "../data/GlobalContextProvider";
+import UsersList from "./UsersList";
+import TodosList from "./TodosList";
 
-export const CounterContext = createContext(null);
-
-function App() {
-
-    const [counter, setCounter] = useState(0);
-
-    const increaseCounter = () => {
-        setCounter( counter => counter + 1 )
-    }
-
-  return (
-      <CounterContext.Provider value={{counter, increaseCounter}}>
-          <div>
-              <CounterWrapper />
-          </div>
-      </CounterContext.Provider>
-
-  );
-}
+const App = () => (
+    <GlobalContextProvider>
+        <div className="container">
+            <div className="row">
+                <div className="col-4">
+                    <UsersList />
+                </div>
+                <div className="col-8 list-group">
+                    <TodosList />
+                </div>
+            </div>
+        </div>
+    </GlobalContextProvider>
+)
 
 export default App;
