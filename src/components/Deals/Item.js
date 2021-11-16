@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from "../Ui/Button";
 import {useDispatch} from "react-redux";
-import {changeDealById, removeDealById} from "../../store/actionsCreator";
+import {changeDealById, removeDealById} from "../../store/Deals/actionsCreator";
 
 const Item = ({item}) => {
 

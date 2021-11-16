@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Button from "../Ui/Button";
 import {useDispatch} from "react-redux";
-import {addNewDeal} from "../../store/actionsCreator";
+import {addNewDeal} from "../../store/Deals/actionsCreator";
 
 const Form = () => {
 

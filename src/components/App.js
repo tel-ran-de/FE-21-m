@@ -1,17 +1,17 @@
 import React from 'react'
-import Form from "./Form/Form";
-import List from "./Deals/List";
+import NavBar from "./NavBar";
+import {Route, Routes} from "react-router-dom";
+import Main from "./Deals/Main";
+import MainPost from "./Posts/Main";
 
 const App = () => (
     <div className="container">
-        <div className="row">
-            <div className="col-sm-4">
-                <Form/>
-            </div>
-            <div className="col-sm-8">
-                <List/>
-            </div>
-        </div>
+        <NavBar />
+        <Routes>
+            <Route path="/" index element={<h1>Dashboard</h1>} />
+            <Route path="/deals" element={<Main />} />
+            <Route path="/posts" element={<MainPost />} />
+        </Routes>
     </div>
 )
 
