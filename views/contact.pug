@@ -1,0 +1,14 @@
+doctype=html
+html
+    head
+        title Contact Information
+        style
+            include ../public/css/styles.css
+    body
+        h1 Contact page
+        a(href='/', class='link') Home
+        div(class="wrapper")
+            p Tel: #{tel}
+            p email: #{email}
+            p Address: #{address}
+            img(src='/images/server.jpeg', alt='server')

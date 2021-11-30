@@ -1,0 +1,12 @@
+doctype=html
+html
+    head
+        title Contact Information
+        style
+            include ../public/css/styles.css
+    body
+        h1 Articles #{article.id}
+        div(class="wrapper")
+            div(class="article")
+                h2= article.title
+                div(class="article-body")!= article.content
