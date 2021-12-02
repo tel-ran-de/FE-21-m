@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
         },
         author_id: {
             type: Sequelize.INTEGER,
-            defaultValue: 3
+            defaultValue: 1
         },
         description: {
             type: Sequelize.TEXT,

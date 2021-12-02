@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 
-const PORT = 8080
+const PORT = 8081
 
 const app = express()
 
@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 })
 
 require('./routes/author.routes')(app)
+require('./routes/book.routes')(app)
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)

@@ -1,6 +1,5 @@
-const author = require("../controller/author.controler");
 module.exports = app => {
-    const author = require('../controller/author.controler')
+    const author = require('../controller/author.controller')
     const router = require('express').Router()
 
     router.post("/", author.create)
