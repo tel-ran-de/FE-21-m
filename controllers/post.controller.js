@@ -102,5 +102,26 @@ exports.setPublished = (req, res) => {
 }
 
 exports.addComment = (req, res) => {
-    res.send({message: 'Implement me please!!!'})
+    if (!req.body.content) return res.status(400).send({message: 'The content cannot be empty'})
+    const id = req.params.id
+    Post.findByIdAndUpdate(id, {
+        $push: {
+            comments: req.body
+        }
+    })
+        .then(data => {
+            if (!data) {
+                return res.status(404).send({message: 'Post not found'})
+            }
+            Post.findById(id)
+                .then(data => {
+                    res.send(data)
+                })
+                .catch(err => {
+                    res.status(500).send({message: err.message})
+                })
+        })
+        .catch(err => {
+            res.status(500).send({message: err.message})
+        })
 }
