@@ -19,6 +19,7 @@ db.Sequelize = Sequelize
 
 db.author = require("./author.model")(sequelize, Sequelize)
 db.book = require("./book.model")(sequelize, Sequelize)
+db.user = require("./user.model")(sequelize, Sequelize)
 
 db.author.hasMany(db.book, {as: "books", foreignKey: 'author_id'})
 db.book.belongsTo(db.author, {as: "author", foreignKey: 'author_id'})

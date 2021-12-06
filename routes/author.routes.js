@@ -1,16 +1,17 @@
+const authJwt = require("../middlewares/authJwt");
 module.exports = app => {
     const author = require('../controller/author.controller')
     const router = require('express').Router()
 
-    router.post("/", author.create)
+    router.post("/",[authJwt.verifyToken], author.create)
 
     router.get('/', author.findAll)
     router.get('/active', author.findActive)
     router.get('/:id', author.findOne)
 
-    router.put('/:id', author.update)
+    router.put('/:id',[authJwt.verifyToken], author.update)
 
-    router.delete('/:id', author.delete)
+    router.delete('/:id',[authJwt.verifyToken], author.delete)
 
     app.use('/api/v1/authors', router)
 }

@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 
-const PORT = 8081
+const PORT = 8080
 
 const app = express()
 
@@ -16,8 +16,17 @@ app.get('/', (req, res) => {
     res.send({message: "Hello, world"})
 })
 
+app.use((req, res, next) => {
+    res.header(
+        "Access-Control-Allow-Headers",
+        "x-oauth-token, Origin, Content-Type, Accept"
+    )
+    next()
+})
+
 require('./routes/author.routes')(app)
 require('./routes/book.routes')(app)
+require('./routes/auth.routes')(app)
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
