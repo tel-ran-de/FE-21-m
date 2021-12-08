@@ -1,6 +1,6 @@
 import {onError} from "./error.actionCreator";
-import {ADD_AUTH} from "../actions";
-const URL = 'http://localhost:8080/api/v1'
+import {ADD_AUTH, CLEAR_AUTH} from "../actions";
+import {URL} from '../lib/vars'
 
 
 export const doRegistration = data => {
@@ -35,7 +35,6 @@ export const doLogin = data => {
                 }
             })
             const body = await response.json()
-            console.log('action',body)
             if (response.status !== 200) {
                 return dispatch(onError(body.message))
             }
@@ -47,7 +46,13 @@ export const doLogin = data => {
     }
 }
 
-const addAuth = data => {
+export const clearAuth = () => {
+    return {
+        type: CLEAR_AUTH
+    }
+}
+
+export const addAuth = data => {
     return {
         type: ADD_AUTH,
         payload: data

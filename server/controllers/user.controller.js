@@ -40,7 +40,7 @@ exports.changeRole = (req, res) => {
             if(!data) {
                 return res.status(404).send({message: 'User not found'})
             }
-            User.findByPk(id)
+            User.findByPk(id, {attributes: {exclude: ["password"]}})
                 .then(user => {
                     res.send(user)
                 })

@@ -1,4 +1,4 @@
-import {ADD_AUTH} from "../actions";
+import {ADD_AUTH, CLEAR_AUTH} from "../actions";
 
 const initState = {
     isAuth: false,
@@ -10,8 +10,11 @@ export const AuthReducer = (state=initState, {type, payload}) => {
     switch (type) {
 
         case ADD_AUTH:
-            console.log( payload )
             return {...state, isAuth: true, user: payload.user, accessToken: payload.accessToken}
+
+        case CLEAR_AUTH: {
+            return {...state, ...initState}
+        }
 
         default:
             return state

@@ -1,3 +1,6 @@
 export const ADD_ERROR = 'ADD_ERROR'
 export const REMOVE_ERROR = 'REMOVE_ERROR'
 export const ADD_AUTH = 'ADD_AUTH'
+export const CLEAR_AUTH = 'CLEAR_AUTH'
+export const FETCH_USERS = 'FETCH_USERS'
+export const CHANGE_USER_ROLES = 'CHANGE_USER_ROLES'

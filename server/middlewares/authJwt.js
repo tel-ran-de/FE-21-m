@@ -25,9 +25,17 @@ const isAdmin = (req, res, next) => {
     next()
 }
 
+const isCanShowUserInfo = (req, res, next) => {
+    if (req.role !== 'admin' && req.params.id !== req.userId) {
+        return res.status(403).send({message: 'Forbidden!'})
+    }
+    next()
+}
+
 const authJwt = {
     verifyToken,
-    isAdmin
+    isAdmin,
+    isCanShowUserInfo
 }
 
 module.exports = authJwt
