@@ -5,16 +5,17 @@ import {CHANGE_USER_ROLES, FETCH_USERS} from "../actions";
 export const getAllUsers = () => {
     return async dispatch => {
         try {
+            dispatch(fetchUsers([]))
             const response = await fetch(`${URL}/users`, {
                 headers: {
-                    'x-oauth-token': TOKEN
+                    'x-oauth-token': TOKEN()
                 }
             })
             const data = await response.json()
             if (response.status !== 200) {
                 return dispatch(onError(data.message))
             }
-            dispatch(fetch_users(data))
+            dispatch(fetchUsers(data))
         } catch (e) {
             dispatch(onError(e));
         }
@@ -31,7 +32,7 @@ export const doChangeUserRole = (userId, role) => {
                 }),
                 headers: {
                     'Content-Type':'application/json',
-                    'x-oauth-token': TOKEN
+                    'x-oauth-token': TOKEN()
                 }
             })
             const data = await response.json()
@@ -53,7 +54,7 @@ const changeUserRole = user => {
     }
 }
 
-const fetch_users = data => {
+const fetchUsers = data => {
     return {
         type: FETCH_USERS,
         payload: data

@@ -23,6 +23,9 @@ export default () => {
                     <NavLink className="nav-link" to="/users">Users</NavLink>
                 </li>
                 <li className="nav-item">
+                    <NavLink className="nav-link" to="/companies">Companies</NavLink>
+                </li>
+                <li className="nav-item">
                     <a className="nav-link" href="#" onClick={doLogout}>Logout</a>
                 </li>
             </>)

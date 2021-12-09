@@ -32,10 +32,18 @@ const isCanShowUserInfo = (req, res, next) => {
     next()
 }
 
+const isCanModify = (req, res, next) => {
+    if (req.role === 'guest') {
+        return res.status(403).send({message: 'Forbidden!'})
+    }
+    next()
+}
+
 const authJwt = {
     verifyToken,
     isAdmin,
-    isCanShowUserInfo
+    isCanShowUserInfo,
+    isCanModify
 }
 
 module.exports = authJwt
