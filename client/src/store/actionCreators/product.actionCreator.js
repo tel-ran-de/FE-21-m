@@ -1,27 +1,26 @@
 import {
-    ADD_COMPANY,
-    DELETE_COMPANY,
-    FETCH_ACTIVE_COMPANY,
-    FETCH_COMPANIES,
-    IS_COMPANY_ACTION,
-    UPDATE_COMPANY
+    ADD_PRODUCT,
+    DELETE_PRODUCT,
+    FETCH_ACTIVE_PRODUCT,
+    FETCH_COMPANIES, FETCH_PRODUCTS,
+    IS_PRODUCT_ACTION,
+    UPDATE_PRODUCT
 } from "../actions";
 import {onError} from "./error.actionCreator";
 import {URL, TOKEN} from '../lib/vars'
 import {startLoading, stopLoading} from "./ui.actionCreator";
 
-export const getAllCompanies = () => {
+export const getAllProducts = () => {
     return async dispatch => {
         try {
             dispatch(startLoading())
-            // dispatch(fetchCompanies([]))
-            dispatch(fetchActiveCompany(null))
-            const res = await fetch(`${URL}/companies`)
+            dispatch(fetchActiveProduct(null))
+            const res = await fetch(`${URL}/products`)
             const data = await res.json()
             if (res.status !== 200) {
                 return dispatch(onError(data.message))
             }
-            dispatch(fetchCompanies(data))
+            dispatch(fetchProducts(data))
         } catch (e) {
             dispatch(onError(e.message))
         } finally {
@@ -32,15 +31,15 @@ export const getAllCompanies = () => {
     }
 }
 
-export const getCompanyById = companyId => {
+export const getProductById = productId => {
     return async dispatch => {
         try {
-            const res = await fetch(`${URL}/companies/${companyId}`)
+            const res = await fetch(`${URL}/products/${productId}`)
             const data = await res.json()
             if (res.status !== 200) {
                 return dispatch(onError(data.message))
             }
-            dispatch(fetchActiveCompany(data))
+            dispatch(fetchActiveProduct(data))
         } catch (e) {
             dispatch(onError(e.message))
             // window.open("")
@@ -48,12 +47,12 @@ export const getCompanyById = companyId => {
     }
 }
 
-export const addNewCompany = company => {
+export const addNewProduct = product => {
     return async dispatch => {
         try {
-            const res = await fetch(`${URL}/companies`, {
+            const res = await fetch(`${URL}/products`, {
                 method: 'POST',
-                body: JSON.stringify(company),
+                body: JSON.stringify(product),
                 headers: {
                     'Content-Type': 'application/json',
                     'x-oauth-token': TOKEN()
@@ -63,20 +62,20 @@ export const addNewCompany = company => {
             if (res.status !== 200) {
                 return dispatch(onError(data.message))
             }
-            dispatch(addCompany(data))
-            dispatch(changeCompanyAction(true))
+            dispatch(addProduct(data))
+            dispatch(changeProductAction(true))
         } catch (e) {
             dispatch(onError(e.message))
         }
     }
 }
 
-export const changeCompany = company => {
+export const changeProduct = product => {
     return async dispatch => {
         try {
-            const res = await fetch(`${URL}/companies/${company.id}`, {
+            const res = await fetch(`${URL}/products/${product.id}`, {
                 method: 'PUT',
-                body: JSON.stringify(company),
+                body: JSON.stringify(product),
                 headers: {
                     'Content-Type': 'application/json',
                     'x-oauth-token': TOKEN()
@@ -86,18 +85,18 @@ export const changeCompany = company => {
             if (res.status !== 200) {
                 return dispatch(onError(data.message))
             }
-            dispatch(updateCompany(data))
-            dispatch(changeCompanyAction(true))
+            dispatch(updateProduct(data))
+            dispatch(changeProductAction(true))
         } catch (e) {
             dispatch(onError(e.message))
         }
     }
 }
 
-export const removeCompany = companyId => {
+export const removeProduct = productId => {
     return async dispatch => {
         try {
-            const res = await fetch(`${URL}/companies/${companyId}`, {
+            const res = await fetch(`${URL}/products/${productId}`, {
                 method: 'DELETE',
                 headers: {
                     'x-oauth-token': TOKEN()
@@ -107,51 +106,51 @@ export const removeCompany = companyId => {
             if (res.status !== 200) {
                 return dispatch(onError(data.message))
             }
-            dispatch(deleteCompany(companyId))
+            dispatch(deleteProduct(productId))
         } catch (e) {
             dispatch(onError(e.message))
         }
     }
 }
 
-const fetchCompanies = data => {
+const fetchProducts = data => {
     return {
-        type: FETCH_COMPANIES,
+        type: FETCH_PRODUCTS,
         payload: data
     }
 }
 
-const fetchActiveCompany = data => {
+const fetchActiveProduct = data => {
     return {
-        type: FETCH_ACTIVE_COMPANY,
+        type: FETCH_ACTIVE_PRODUCT,
         payload:data
     }
 }
 
-const addCompany = company => {
+const addProduct = product => {
     return {
-        type: ADD_COMPANY,
-        payload: company
+        type: ADD_PRODUCT,
+        payload: product
     }
 }
 
-const updateCompany = company => {
+const updateProduct = product => {
     return {
-        type: UPDATE_COMPANY,
-        payload: company
+        type: UPDATE_PRODUCT,
+        payload: product
     }
 }
 
-const deleteCompany = companyId => {
+const deleteProduct = productId => {
     return {
-        type: DELETE_COMPANY,
-        payload: companyId
+        type: DELETE_PRODUCT,
+        payload: productId
     }
 }
 
-export const changeCompanyAction = (flag) => {
+export const changeProductAction = (flag) => {
     return {
-        type: IS_COMPANY_ACTION,
+        type: IS_PRODUCT_ACTION,
         payload: flag
     }
 }

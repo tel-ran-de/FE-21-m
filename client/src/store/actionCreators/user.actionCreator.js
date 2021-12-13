@@ -1,11 +1,13 @@
 import {onError} from "./error.actionCreator";
 import {TOKEN, URL} from "../lib/vars";
 import {CHANGE_USER_ROLES, FETCH_USERS} from "../actions";
+import {startLoading, stopLoading} from "./ui.actionCreator";
 
 export const getAllUsers = () => {
     return async dispatch => {
         try {
-            dispatch(fetchUsers([]))
+            dispatch(startLoading())
+            // dispatch(fetchUsers([]))
             const response = await fetch(`${URL}/users`, {
                 headers: {
                     'x-oauth-token': TOKEN()
@@ -16,8 +18,13 @@ export const getAllUsers = () => {
                 return dispatch(onError(data.message))
             }
             dispatch(fetchUsers(data))
+
         } catch (e) {
             dispatch(onError(e));
+        } finally {
+            setTimeout(()=>{
+                dispatch(stopLoading())
+            }, 1000)
         }
     }
 }

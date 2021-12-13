@@ -1,7 +1,15 @@
-import {ADD_COMPANY, DELETE_COMPANY, FETCH_COMPANIES, IS_COMPANY_ACTION, UPDATE_COMPANY} from "../actions";
+import {
+    ADD_COMPANY,
+    DELETE_COMPANY,
+    FETCH_ACTIVE_COMPANY,
+    FETCH_COMPANIES,
+    IS_COMPANY_ACTION,
+    UPDATE_COMPANY
+} from "../actions";
 
 const initState = {
     list: [],
+    activeCompany: null,
     isAction: false
 }
 
@@ -9,6 +17,9 @@ export const CompanyReducer = (state = initState, {type, payload}) => {
     switch (type) {
         case FETCH_COMPANIES:
             return {...state, list: payload}
+
+        case FETCH_ACTIVE_COMPANY:
+            return {...state, activeCompany: payload}
 
         case ADD_COMPANY:
             return {...state, list: [...state.list, payload]}

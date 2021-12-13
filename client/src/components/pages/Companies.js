@@ -3,18 +3,20 @@ import {useDispatch, useSelector} from "react-redux";
 import {getAllCompanies} from "../../store/actionCreators/company.actionCreator";
 import CompanyDetail from "../admin/Company/CompanyDetail";
 import {Link} from "react-router-dom";
+import Spinner from "../ui/Spinner";
 
 export default props => {
 
     const dispatch = useDispatch()
     const companies = useSelector(state => state.company.list)
+    const isLoading = useSelector(state => state.ui.isLoading)
 
     useEffect( () => {
         dispatch(getAllCompanies())
     }, [] )
 
     const renderCompanyList = () => {
-        return !companies.length
+        return isLoading ? <Spinner /> : !companies.length
             ? (<p className="alert alert-warning">No Companies to show</p>)
             : companies.filter(c=>c.isActive === 1).map(c => <CompanyDetail key={c.id} company={c} />)
     }
