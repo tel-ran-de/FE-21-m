@@ -43,7 +43,7 @@ export const getCompanyById = companyId => {
             dispatch(fetchActiveCompany(data))
         } catch (e) {
             dispatch(onError(e.message))
-            // window.open("")
+            window.open(`https://stackoverflow.com/search?q='${e.message}`, '_blank')
         }
     }
 }

@@ -29,6 +29,9 @@ export default () => {
                     <NavLink className="nav-link" to="/products">Products</NavLink>
                 </li>
                 <li className="nav-item">
+                    <NavLink className="nav-link" to="/orders">Orders</NavLink>
+                </li>
+                <li className="nav-item">
                     <a className="nav-link" href="#" onClick={doLogout}>Logout</a>
                 </li>
             </>)

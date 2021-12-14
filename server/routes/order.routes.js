@@ -6,6 +6,8 @@ module.exports = app => {
     router.get('/', controller.findAll)
     router.get('/:id', controller.findOne)
 
+    router.post('/', [authJwt.verifyToken, authJwt.isCanModify], controller.create)
+
     app.use('/api/v1/orders', router)
 
 }

@@ -10,6 +10,9 @@ import EditCompany from "../admin/Company/EditCompany";
 import Product from "../pages/Product";
 import EditProduct from "../admin/Product/EditProduct";
 import AddProduct from "../admin/Product/AddProduct";
+import Order from "../pages/Order";
+import ShowOrder from "../admin/Order/ShowOrder";
+import AddOrder from "../admin/Order/AddOrder";
 
 export default props => {
     return (
@@ -25,6 +28,9 @@ export default props => {
             <Route path="/products" element={<Product />} />
             <Route path="/add-product" element={<AddProduct />} />
             <Route path="/edit-product/:productId" element={<EditProduct />} />
+            <Route path="/orders" element={<Order />} />
+            <Route path="/orders/:id" element={<ShowOrder />} />
+            <Route path="/add-order" element={<AddOrder />} />
         </Routes>
         </>
     )

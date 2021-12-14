@@ -5,6 +5,7 @@ import {UserReducer} from "./UserReducer";
 import {CompanyReducer} from "./CompanyReducer";
 import {UiReducer} from "./UiReducer";
 import {ProductReducer} from "./ProductReducer";
+import {OrderReducer} from "./OrderReducer";
 
 export const RootReducer = combineReducers({
     error: ErrorReducer,
@@ -12,5 +13,6 @@ export const RootReducer = combineReducers({
     user: UserReducer,
     company: CompanyReducer,
     product: ProductReducer,
+    order: OrderReducer,
     ui: UiReducer,
 })
